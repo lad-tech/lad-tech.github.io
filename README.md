@@ -1,2 +1,2 @@
-# Техрадар компании Lad-IT lad-tech.github.io
+# Техрадар компании Lad-IT
 [Посмотреть >](https://lad-tech.github.io/)

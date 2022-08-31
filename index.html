@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <meta name="description" content="Lad-tech Radar">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lad-tech Radar</title>
+
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="radar.js"></script>
+
+  <link rel="stylesheet" href="radar.css">
+</head>
+
+<body>
+
+  <svg id="radar"></svg>
+
+  <script>
+    radar_visualization({
+      svg_id: "radar",
+      width: 1450,
+      height: 1000,
+      colors: {
+        background: "#fff",
+        grid: "#bbb",
+        inactive: "#ddd"
+      },
+      title: "Lad-tech Radar — 2022.09",
+      quadrants: [{
+          name: "Languages"
+        },
+        {
+          name: "Data Store & Management"
+        },
+        {
+          name: "Frameworks & Libs"
+        },
+        {
+          name: "Infrastructure"
+        },
+      ],
+      rings: [{
+          name: "ADOPT",
+          color: "#93c47d"
+        },
+        {
+          name: "TRIAL",
+          color: "#93d2c2"
+        },
+        {
+          name: "ASSESS",
+          color: "#fbdb84"
+        },
+        {
+          name: "HOLD",
+          color: "#efafa9"
+        }
+      ],
+      print_layout: true,
+      //ENTRIES
+      entries: [{
+          "quadrant": 0,
+          "ring": 0,
+          "label": "TypeScript",
+          "link": "https://www.typescriptlang.org/",
+          "active": true,
+          "moved": 0
+        },
+        {
+          "quadrant": 0,
+          "ring": 3,
+          "label": "JavaScript",
+          "active": true,
+          "moved": 0
+        },
+        {
+          "quadrant": 0,
+          "ring": 2,
+          "label": "GoLang",
+          "link": "https://go.dev/",
+          "active": true,
+          "moved": 1
+        },
+        {
+          "quadrant": 0,
+          "ring": 1,
+          "label": "C++",
+          "active": true,
+          "moved": 1
+        },
+        {
+          "quadrant": 1,
+          "ring": 0,
+          "label": "MongoDB",
+          "link": "https://www.mongodb.com/",
+          "active": true,
+          "moved": 0
+        },
+        {
+          "quadrant": 1,
+          "ring": 0,
+          "label": "Redis",
+          "link": "https://redis.io/",
+          "active": true,
+          "moved": 0
+        },
+        {
+          "quadrant": 1,
+          "ring": 0,
+          "label": "ClickHouse",
+          "link": "https://clickhouse.com/",
+          "active": true,
+          "moved": 0
+        },
+        {
+          "quadrant": 1,
+          "ring": 0,
+          "label": "Elasticsearch",
+          "link": "https://www.elastic.co/",
+          "active": true,
+          "moved": 0
+        },
+        {
+          "quadrant": 1,
+          "ring": 0,
+          "label": "PostgreSQL",
+          "link": "https://www.postgrespro.ru/",
+          "active": true,
+          "moved": 0
+        },
+        {
+          "quadrant": 1,
+          "ring": 2,
+          "label": "Tarantool",
+          "link": "https://www.tarantool.io/ru/",
+          "active": true,
+          "moved": 0
+        },
+        {
+          "quadrant": 1,
+          "ring": 0,
+          "label": "Nats",
+          "link": "https://nats.io/",
+          "active": true,
+          "moved": 0
+        },
+        {
+          "quadrant": 1,
+          "ring": 0,
+          "label": "RabbitMQ",
+          "link": "https://www.rabbitmq.com/",
+          "active": true,
+          "moved": 0
+        },
+        {
+          "quadrant": 1,
+          "ring": 1,
+          "label": "Kafka",
+          "link": "https://kafka.apache.org/",
+          "active": true,
+          "moved": 0
+        },
+        {
+          "quadrant": 2,
+          "ring": 3,
+          "label": "Hemerajs",
+          "link": "https://hemerajs.github.io/hemera/",
+          "active": true,
+          "moved": 0
+        },
+        {
+          "quadrant": 2,
+          "ring": 3,
+          "label": "Mongoose",
+          "link": "https://mongoosejs.com/",
+          "active": true,
+          "moved": 0
+        },
+        {
+          "quadrant": 2,
+          "ring": 0,
+          "label": "typeORM",
+          "link": "https://typeorm.io/",
+          "active": true,
+          "moved": 0
+        },
+        {
+          "quadrant": 2,
+          "ring": 3,
+          "label": "NestJS",
+          "link": "https://nestjs.com/",
+          "active": true,
+          "moved": 0
+        },
+        {
+          "quadrant": 2,
+          "ring": 0,
+          "label": "elastic/elasticsearch",
+          "link": "https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/index.html",
+          "active": true,
+          "moved": 0
+        },
+        {
+          "quadrant": 2,
+          "ring": 0,
+          "label": "elastic-dsl-typescript",
+          "link": "https://github.com/Blynskyniki/elastic-dsl-typescript",
+          "active": true,
+          "moved": 0
+        },
+        {
+          "quadrant": 2,
+          "ring": 2,
+          "label": "grpc",
+          "link": "https://grpc.io/",
+          "active": true,
+          "moved": 1
+        },
+        {
+          "quadrant": 2,
+          "ring": 0,
+          "label": "adminjs",
+          "link": "https://docs.adminjs.co/index.html",
+          "active": true,
+          "moved": 0
+        },
+        {
+          "quadrant": 2,
+          "ring": 1,
+          "label": "inversify",
+          "link": "https://inversify.io/",
+          "active": true,
+          "moved": 1
+        },
+        {
+          "quadrant": 2,
+          "ring": 1,
+          "label": "fastify",
+          "link": "https://www.fastify.io/",
+          "active": true,
+          "moved": 1
+        },
+        {
+          "quadrant": 2,
+          "ring": 0,
+          "label": "Hapi",
+          "link": "https://hapi.dev/",
+          "active": true,
+          "moved": -1
+        },
+        {
+          "quadrant": 3,
+          "ring": 0,
+          "label": "Docker",
+          "link": "https://www.docker.com/",
+          "active": true,
+          "moved": 0
+        },
+        {
+          "quadrant": 3,
+          "ring": 0,
+          "label": "Kubernetes",
+          "link": "https://kubernetes.io/ru/",
+          "active": true,
+          "moved": 0
+        },
+        {
+          "quadrant": 3,
+          "ring": 3,
+          "label": "Rancher",
+          "link": "https://rancher.com/",
+          "active": true,
+          "moved": 0
+        },
+        {
+          "quadrant": 3,
+          "ring": 0,
+          "label": "Graylog",
+          "active": true,
+          "moved": 0
+        },
+        {
+          "quadrant": 3,
+          "ring": 0,
+          "label": "Grafana",
+          "link": "https://grafana.com/",
+          "active": true,
+          "moved": 0
+        },
+        {
+          "quadrant": 3,
+          "ring": 0,
+          "label": "Jaeger",
+          "link": "https://www.jaegertracing.io/",
+          "active": true,
+          "moved": -1
+        },
+        {
+          "quadrant": 3,
+          "ring": 2,
+          "label": "Tempo",
+          "link": "https://grafana.com/oss/tempo/",
+          "active": true,
+          "moved": 1
+        },
+        {
+          "quadrant": 3,
+          "ring": 2,
+          "label": "Loki",
+          "link": "https://grafana.com/oss/loki/",
+          "active": true,
+          "moved": 1
+        },
+        {
+          "quadrant": 3,
+          "ring": 2,
+          "label": "Istio",
+          "link": "https://istio.io/latest/",
+          "active": true,
+          "moved": 1
+        },
+      ]
+      //ENTRIES
+    });
+  </script>
+
+  <table>
+    <tr>
+      <td>
+
+        <h3>What is the Tech Radar?</h3>
+
+        <p>
+          This technical radar is based on <a href="https://github.com/zalando/tech-radar">Zelando tech radar</a>.
+        </p>
+
+        <p>
+          We use four rings with the following semantics:
+        </p>
+
+      </td>
+    </tr>
+  </table>
+
+  <table>
+    <tr>
+      <td>
+
+        <ul>
+          <li><strong>ADOPT</strong> &mdash; Technologies we have high confidence in to serve our purpose, also in large
+            scale. Technologies with a usage culture in our Lad production environment, low risk and recommended to be
+            widely used.</li>
+          <li><strong>TRIAL</strong> &mdash; Technologies that we have seen work with success in project work to solve a
+            real problem; first serious usage experience that confirm benefits and can uncover limitations. TRIAL
+            technologies are slightly more risky; some engineers in our organization walked this path and will share
+            knowledge and experiences.</li>
+        </ul>
+
+      </td>
+      <td>
+
+        <ul>
+          <li><strong>ASSESS</strong> &mdash; Technologies that are promising and have clear potential value-add for us;
+            technologies worth to invest some research and prototyping efforts in to see if it has impact. ASSESS
+            technologies have higher risks; they are often brand new and highly unproven in our organisation. You will
+            find some engineers that have knowledge in the technology and promote it, you may even find teams that have
+            started a prototyping effort.</li>
+          <li><strong>HOLD</strong> &mdash; Technologies not recommended to be used for new projects. Technologies that
+            we think are not (yet) worth to (further) invest in. HOLD technologies should not be used for new projects,
+            but usually can be continued for existing projects.</li>
+        </ul>
+
+      </td>
+    </tr>
+  </table>
+
+</body>
+
+</html>
